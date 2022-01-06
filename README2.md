@@ -76,7 +76,7 @@ V ukazni vrstici poženite:
 
 Če ste si OCaml namestili na sistemu Windows s pomočjo `fdopen` namesto `ocamlc` uporabite:
 
-    C:\OCaml64\usr\local\bin\ocaml-env.exe exec -- C:\OCaml64\home\???\.opam\4.12.0+mingw64c\bin\ocamlc.exe
+    C:\OCaml64\usr\local\bin\ocaml-env.exe exec -- C:\OCaml64\home\marci\.opam\4.13.1+mingw64c\bin\ocamlc.exe
 
 To ustvari datoteko `sudoku.exe`, ki ob klicu
 

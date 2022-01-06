@@ -21,8 +21,19 @@
         {
             "label": "OCaml",
             "type": "shell",
-            "command": "C:\\OCaml64\\usr\\local\\bin\\ocaml-env.exe exec -- C:\\OCaml64\\home\\marci\\.opam\\4.13.1+mingw64c\\bin\\ocaml.exe -init \\\"${file}\\\"",
-            "problemMatcher": []
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "C:\\OCaml64\\usr\\local\\bin\\ocaml-env.exe exec -- C:\\OCaml64\\home\\marci\\.opam\\4.13.1+mingw64c\\bin\\ocaml.exe -init \\\"${file}\\\""
+                },
+            "linux": {
+                "command": "ocaml -init \"${file}\""
+            },
+            "osx": {
+                "command": "ocaml -init \"${file}\""
+            }
         }
     ]
 }
