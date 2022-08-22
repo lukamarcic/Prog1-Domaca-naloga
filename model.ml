@@ -54,13 +54,13 @@ let columns grid = List.init 9 (get_column grid)
 
 let get_box (grid : 'a grid) (box_ind : int) =
   let m = match box_ind with
-    | 0 -> 1
-    | 1 -> 1
-    | 2 -> 1
-    | 3 -> 2
-    | 4 -> 2
-    | 5 -> 2
-    | _ -> 3
+    | 0 -> 0
+    | 1 -> 0
+    | 2 -> 0
+    | 3 -> 3
+    | 4 -> 3
+    | 5 -> 3
+    | _ -> 6
   in
   let n = (box_ind mod 3) * 3
   in
@@ -159,13 +159,13 @@ let preveri_grid grid =
   let bool_boxes = Array.for_all preveri_row box_list in
   bool_rows && bool_columns && bool_boxes
 
-  let int_op_to_int  = function
+let int_op_to_int  = function
   | None -> 0
   | Some n -> n
 
 let problem_and_solution problem solution =
   let elementi_solution = Array.to_list (Array.concat (rows solution)) in
-  let elementi_problem_temp = Array.to_list (Array.concat (rows problem)) in
+  let elementi_problem_temp = Array.to_list (Array.concat (rows problem.initial_grid)) in
   let elementi_problem = List.map int_op_to_int elementi_problem_temp in
   let rec po_elementih lst1 lst2 =
     match lst1 with
@@ -178,4 +178,4 @@ let problem_and_solution problem solution =
   po_elementih elementi_problem elementi_solution
   
 
-  let is_valid_solution problem solution = preveri_grid solution && problem_and_solution problem solution
+let is_valid_solution problem solution = preveri_grid solution && problem_and_solution problem solution

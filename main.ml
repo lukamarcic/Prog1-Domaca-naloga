@@ -38,23 +38,3 @@ let () =
   |> List.map read_problem
   (* Probleme zaporedoma rešimo *)
   |> List.iter find_and_display_solution
-
-(* Če domačo nalogo rešujete prek spletnega vmesnika, ki ne podpira branja datotek,
-   lahko delovanje preizkušate prek spodnjega programa. *)
-
-(*let () = "
-┏━━━┯━━━┯━━━┓
-┃483│921│657┃
-┃967│3 5│821┃
-┃251│876│493┃
-┠───┼───┼───┨
-┃548│132│976┃
-┃729│ 64│ 38┃
-┃136│798│ 45┃
-┠───┼───┼───┨
-┃372│689│514┃
-┃814│253│769┃
-┃695│417│382┃
-┗━━━┷━━━┷━━━┛"
-  |> Model.problem_of_string
-  |> find_and_display_solution *)
